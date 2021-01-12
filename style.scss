@@ -1,0 +1,179 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: sans-serif;
+    width: auto;
+    overflow-x: hidden;
+}
+
+.container {
+
+    background-color: rgb(79, 224, 176);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 40px;
+    margin: auto;
+    box-shadow: 15px 15px 0 5px rgb(143, 255, 218);
+
+
+
+    .main-head {
+
+        text-align: center;
+        font-size: 3em;
+        color: rgb(30, 158, 158);
+    }
+
+    .show-password {
+
+        width: 100%;
+        margin-left: 46px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        margin-bottom: 10px;
+
+        .password {
+
+            width: 65%;
+            padding: 5px;
+            border-radius: 3px;
+            color: rgba(110, 110, 110, 0.65);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+
+            &:focus {
+
+                outline-color: aqua;
+            }
+        }
+
+        .copier{
+
+            padding: 3px;
+            margin-left: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: auto;
+
+            .fa-copy {
+
+                border: 2px solid rgb(32, 179, 179);
+                padding: 8px;
+                font-size: x-large;
+                border-radius: 50%;
+                cursor: pointer;
+                color: adjust-hue($color: rgb(152, 255, 221), $degrees: 1);
+                transition: all .2s;
+                margin: auto;
+                background-color: rgb(17, 202, 140);
+    
+    
+                &:hover {
+                    transform: scale(1.08);
+                }
+    
+                &:active {
+    
+                    transform: scale(.9);
+                    transition: all .3s;
+                }
+            }
+
+            .copied-msg {
+
+                position: relative;
+                background-color: rgb(17, 202, 140);
+                color: adjust-hue($color: rgb(185, 255, 232), $degrees: 1);
+                height: 25px;
+                line-height: 24px;
+                padding: 5px 10px;
+                text-transform: uppercase;
+                border-radius: 3px;
+                margin-left: -10px;
+                letter-spacing: 1px;
+                opacity: 0;
+                pointer-events: none;
+                z-index: -1;
+                transition: opacity .4s, margin-left .4s;
+
+                &::before {
+
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background:  rgb(17, 202, 140);
+                    left: -5px;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                    z-index: -1;
+                }
+
+                
+            }
+        }
+
+        
+    }
+
+    .generator {
+
+        width: 80%;
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: left;
+        margin: auto;
+        margin-left: 40px;
+
+        .btn {
+
+            padding: 5px;
+            width: 50%;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            border-color: rgb(52, 190, 190);
+            cursor: pointer;
+            transition: all .22s;
+            color: adjust-hue($color: rgb(185, 255, 232), $degrees: 1);
+            outline: none;
+
+            &:hover {
+
+                background: rgba(0, 0, 0, 0.0);
+                color: black;
+            }
+
+
+            &:active {
+
+                transform: scale(.9);
+            }
+        }
+    }
+
+}
+
+.show {
+
+    opacity: 1;
+    margin-left: 20px;
+    pointer-events: auto;
+}
+
