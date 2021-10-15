@@ -36,10 +36,8 @@ copyIcon.addEventListener('click', () => {
             }, 1200);
             
         }
-        //console.log('working');
     }
     else{
-        //console.log('notworking');
         alert('Password is too short to copy!');
     }
 });
